@@ -3,11 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Search Products</title>
-    <link rel="stylesheet" href="/public/css/bundler.css">
+    <link rel="stylesheet" href="css/bundle.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 <div id="app" class="main">
+  <header class="search-box">
+      <div class="search-box-container container grid-container">
+        <img src="img/Logo_ML.png" alt="mercadolibre logo" />
+        <form class="search-box-form grid-container">
+          <input type="text" class="search-input" placeholder="Nunca dejes de buscar">
+          <button class="search-box-btn">
+            <img src="img/ic_Search.png" alt="icon search product">
+          </button>
+        </form>
+      </div>
+  </header>
+
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="flex-container breadcrumb">
+        <li class="breadcrumb-item"><a>Electronica, Audio y Video</a></li>
+        <li class="breadcrumb-item"><a>Ipod</a></li>
+        <li class="breadcrumb-item"><a>Reproductores</a></li>
+        <li class="breadcrumb-item"><a>Ipad Touch</a></li>
+        <li class="breadcrumb-item active">32gb</li>
+      </ol>
+    </nav>
+
+    <div class="result-container">
+      <ul class="result-list">
+        <li class="product">
+          <div class="left-product">
+            <img src="img/200x200.png" class="img-product-list" />
+          </div>
+          <div class="center-product">
+            <h2 class="price-item font-bold-light">$ 2.000 <i class="free-shipping-icon"></i></h2>
+            <span>Iphone 6</span>
+          </div>
+          <div class="right-product">
+            <h4 class="font-bold-light">Capital Federal</h4>
+          </div>
+        </li>
+        <li class="product">
+          <div class="left-product">
+            <img src="img/200x200.png" class="img-product-list"/>
+          </div>
+          <div class="center-product">
+            <h2 class="price-item font-bold-light">$ 2.000 <i class="free-shipping-icon"></i></h2>
+            <span>Iphone 6</span>
+          </div>
+          <div class="right-product">
+            <h4 class="font-bold-light">Capital Federal</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
-<script src="/public/js/bundle.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>

@@ -11,16 +11,12 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     context: __dirname,
     entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
-        './app/ClientApp.jsx',
         './app/scss/main.scss'
     ],
     devtool: 'cheap-eval-source-map',
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js',
+        filename: 'js/bundle.js',
         publicPath: '/public/js/'
     },
     devServer: {
