@@ -1,0 +1,11 @@
+@import "variables";
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: $gray-light;
+}
+
+textarea:focus, input:focus, button:focus, img:focus{
+  outline: none;
+}

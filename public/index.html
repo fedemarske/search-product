@@ -3,11 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Search Products</title>
-    <link rel="stylesheet" href="/public/css/bundler.css">
+    <link rel="stylesheet" href="css/bundle.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 <div id="app" class="main">
+  <header class="search-box">
+      <div class="search-box-container container grid-container">
+        <img src="img/Logo_ML.png" alt="mercadolibre logo" />
+        <form class="search-box-form grid-container">
+          <input type="text" class="search-input" placeholder="Nunca dejes de buscar">
+          <button class="search-box-btn">
+            <img src="img/ic_Search.png" alt="icon search product">
+          </button>
+        </form>
+      </div>
+  </header>
+
+  <div class="container mb-lt">
+    <nav aria-label="breadcrumb">
+      <ol class="flex-container breadcrumb">
+        <li class="breadcrumb-item"><a>Electronica, Audio y Video</a></li>
+        <li class="breadcrumb-item"><a>Ipod</a></li>
+        <li class="breadcrumb-item"><a>Reproductores</a></li>
+        <li class="breadcrumb-item"><a>Ipad Touch</a></li>
+        <li class="breadcrumb-item active">32gb</li>
+      </ol>
+    </nav>
+
+    <div class="result-container main-container">
+      <ul class="result-list">
+        <li class="product">
+          <div class="left-product">
+            <a href="#">
+              <img src="img/200x200.png" class="img-product-list" />
+            </a>
+          </div>
+          <div class="center-product">
+            <a href="#" class="anchor-decoration-none">
+              <h2 class="price-item font-bold-light">$ 2.000 <i class="free-shipping-icon"></i></h2>
+              <span>Iphone 6</span>
+            </a>
+          </div>
+          <div class="right-product">
+            <h4 class="font-bold-light">Capital Federal</h4>
+          </div>
+        </li>
+        <li class="product">
+          <div class="left-product">
+            <a href="#">
+              <img src="img/200x200.png" class="img-product-list"/>
+            </a>
+          </div>
+          <div class="center-product">
+            <a href="#" class="anchor-decoration-none">
+              <h2 class="price-item font-bold-light">$ 2.000 <i class="free-shipping-icon"></i></h2>
+              <span>Iphone 6</span>
+            </a>
+          </div>
+          <div class="right-product">
+            <h4 class="font-bold-light">Capital Federal</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+<!--    <div class="main-container">
+      <div class="details-container">
+        <div class="top-details-container grid-container">
+          <img src="img/200x200.png" class="img-details-product">
+          <div class="price-details-container">
+            <span class="sell-items">Nuevo - 234 vendidos</span>
+            <h2 class="product-details-title">Title</h2>
+            <h1 class="product-details-price">$2.000</h1>
+            <button class="btn-primary">Comprar</button>
+          </div>
+        </div>
+        <div class="description-container">
+          <h2>Descripcion del producto</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu porta nisl, id cursus justo. Integer sed venenatis magna, id consequat massa. Nunc faucibus nulla ex. Praesent ac porttitor eros. Curabitur viverra quis libero at pellentesque. Vestibulum sodales felis vel cursus tempus. Pellentesque vel vehicula nunc, eu luctus diam.
+
+            Aenean mauris ex, vulputate ac enim vel, egestas malesuada urna. Vivamus dictum condimentum nunc in aliquet. Vestibulum eget ex nec felis vulputate laoreet. Suspendisse faucibus ipsum sed vulputate sollicitudin. Ut et mattis dolor. Phasellus efficitur vel tellus eu mattis. Aliquam pretium enim sit amet tortor sollicitudin mollis. Ut et elit est. Maecenas leo justo, mollis sit amet dignissim aliquam, facilisis tristique ex. Donec finibus justo faucibus urna tincidunt, pretium scelerisque orci rhoncus. Sed non dignissim nunc.</p>
+        </div>
+      </div>
+    </div>-->
+
+  </div>
 </div>
-<script src="/public/js/bundle.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>
