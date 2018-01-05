@@ -1,0 +1,57 @@
+@import "variables";
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
+
+.mb-lt {
+  margin-bottom: 50px;
+}
+
+.grid-container {
+  display: inline-grid;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.main-container{
+  background-color: $white;
+}
+
+.font-bold-light {
+  font-weight: 500;
+}
+
+.anchor-decoration-none {
+  text-decoration: none;
+  color: $black;
+}
+
+.btn-primary {
+  height: 50px;
+  width: 100%;
+  background: $blue;
+  color: $white;
+  border-radius: 3px;
+}

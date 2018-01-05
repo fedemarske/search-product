@@ -3,19 +3,52 @@ html, body {
   height: 100%;
   background-color: #eee; }
 
-.main .container {
-  width: 60%;
+textarea:focus, input:focus, button:focus, img:focus {
+  outline: none; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
 
-.main .grid-container {
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px; } }
+
+.mb-lt {
+  margin-bottom: 50px; }
+
+.grid-container {
   display: inline-grid; }
 
-.main .flex-container {
+.flex-container {
   display: flex; }
 
-.main .font-bold-light {
+.main-container {
+  background-color: #fff; }
+
+.font-bold-light {
   font-weight: 500; }
+
+.anchor-decoration-none {
+  text-decoration: none;
+  color: #333; }
+
+.btn-primary {
+  height: 50px;
+  width: 100%;
+  background: #3483FA;
+  color: #fff;
+  border-radius: 3px; }
 
 .main input {
   width: 100%;
@@ -30,9 +63,9 @@ html, body {
   padding: 10px 0;
   margin-bottom: 20px; }
   .main .search-box .search-box-container {
-    grid-template-columns: 80px 90%; }
+    grid-template-columns: 70px 90%; }
   .main .search-box .search-box-form {
-    grid-template-columns: 95% 40px; }
+    grid-template-columns: 100% 40px; }
   .main .search-box .search-box-btn {
     border: none;
     background-color: #eee; }
@@ -50,9 +83,6 @@ html, body {
     padding-right: .5rem;
     padding-left: .5rem;
     content: ">"; }
-
-.main .result-container {
-  background-color: #fff; }
 
 .main .result-list {
   list-style: none;
@@ -72,3 +102,22 @@ html, body {
     width: 180px;
     height: 180px;
     border-radius: 4px; }
+
+.main .top-details-container {
+  grid-template-columns: 1fr 2fr; }
+  .main .top-details-container .img-details-product {
+    width: 680px; }
+  .main .top-details-container .price-details-container {
+    padding-top: 32px;
+    padding-right: 32px; }
+  .main .top-details-container .sell-items {
+    font-size: 14px; }
+  .main .top-details-container .product-details-price {
+    margin-top: 13px; }
+  .main .top-details-container .product-details-price {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    font-size: 46px; }
+
+.main .description-container {
+  padding: 20px; }
