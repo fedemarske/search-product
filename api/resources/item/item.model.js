@@ -43,7 +43,6 @@ getAuthor = () => {
 };
 
 getCategories = (raw) => {
-  console.log(raw.filters[0])
   let categories = raw.filters[0].values[0].path_from_root;
   return categories.map((category) => {
     return category.name;
@@ -62,6 +61,7 @@ getItem = (itemRaw, isDetail) => {
 
   if (isDetail) {
     item.sold_quantity = itemRaw.sold_quantity;
+    item.picture = itemRaw.pictures[0].url;
   }
 
   return item;
@@ -92,7 +92,7 @@ getPrice = (priceRaw, currency_id) => {
 addDescription = (item) => {
   return new Promise((resolve, reject) => {
     itemServices.getDescription(item.item.id).then((result) => {
-      item.description = JSON.parse(result).plain_text;
+      item.item.description = JSON.parse(result).plain_text;
       resolve(item);
     })
   });

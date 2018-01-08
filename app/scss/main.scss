@@ -12,6 +12,10 @@
     border: none;
   }
 
+  .loading {
+    text-align: center;
+  }
+
   .search-box {
     background-color: $yellow;
     text-align: center;
@@ -78,6 +82,10 @@
       border-radius: 4px;
     }
 
+    .free-shipping {
+      margin-left: 10px;
+    }
+
   }
 
   .top-details-container {
@@ -105,10 +113,28 @@
       margin-top: $margin-lt;
       font-size: 46px;
     }
+
+    .decimals {
+      font-size: 24px;
+      position: relative;
+      bottom: 15px;
+      font-weight: 400;
+      margin-left: 5px;
+    }
   }
 
   .description-container {
     padding: 20px;
+    width: 680px;
+
+    .description-title {
+      font-size: $font-28;
+    }
+
+    .description {
+      font-size: $font-16;
+      color: $gray;
+    }
   }
 
 }
