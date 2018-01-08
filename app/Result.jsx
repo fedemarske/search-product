@@ -1,6 +1,9 @@
+// @flow
+
 import React from 'react'
 import axios from 'axios'
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom"
+import queryString from 'query-string'
 import Breadcrumb from './Breadcrumb'
 import Product from './Product'
 
@@ -30,9 +33,14 @@ class Result extends React.Component {
   }
 
   getQueryParam() {
-    const params = new URLSearchParams(this.props.location.search);
-    return params.get('search')
+    return queryString.parse(this.props.location.search).search;
   }
+
+  props: {
+    location: {
+      search: {}
+    }
+  };
 
   render(){
     return (

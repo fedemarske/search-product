@@ -1,17 +1,29 @@
+// @flow
+
 import React from 'react'
 import {withRouter} from "react-router-dom";
 
 class Search extends React.Component {
+
   state = {
     searchTerm: ''
   };
+
   handleSearchTerm = (event) => {
     this.setState({searchTerm: event.target.value})
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.history.push(`/items?search=${this.state.searchTerm}`);
   };
+
+  props: {
+    history: {
+      push: Function
+    }
+  };
+
   render(){
     return (
       <header className="search-box">
