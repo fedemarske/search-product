@@ -11,6 +11,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     context: __dirname,
     entry: [
+        './app/ClientApp.jsx',
         './app/scss/main.scss'
     ],
     devtool: 'cheap-eval-source-map',
@@ -36,10 +37,10 @@ module.exports = {
     module: {
         rules: [
             {
-                enforce: 'pre',
-                test: /\.jsx?$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
+              enforce: 'pre',
+              test: /\.jsx?$/,
+              loader: 'eslint-loader',
+              exclude: /node_modules/
             },
             {
                 test: /\.jsx?$/,
