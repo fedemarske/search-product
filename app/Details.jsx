@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import axios from 'axios'
 
@@ -10,11 +12,11 @@ class Details extends React.Component {
     this.getProductDetails(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.getProductList(nextProps.match.params.id)
+  componentWillReceiveProps(nextProps: typeof Details.prototype.props) {
+    this.getProductDetails(nextProps.match.params.id)
   }
 
-  getProductDetails(param) {
+  getProductDetails(param: string) {
     axios.get(`/api/items/${param}`)
       .then((response) => {
         this.setState({
@@ -27,6 +29,14 @@ class Details extends React.Component {
     const price = this.state.product.price.amount;
     return price.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
   }
+
+  props: {
+    match: {
+      params: {
+        id: string
+      }
+    }
+  };
 
   isProductNew() {
     return this.state.product.condition === 'new' ? 'Nuevo' : 'Usado';

@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,6 +9,18 @@ class Product extends React.Component {
     const price = this.props.product.price.amount;
     return price.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")
   }
+
+  props: {
+    product: {
+      id: string,
+      title: string,
+      price: {
+        amount: string
+      },
+      free_shipping: string,
+      picture: string
+    }
+  };
 
   isFreeShipping(){
     if(this.props.product.free_shipping){
